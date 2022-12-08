@@ -11,7 +11,6 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var showSheet = false
-//    @State private var showSecondSheet = false
 
     var body: some View {
         VStack {
@@ -19,14 +18,13 @@ struct ContentView: View {
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
             Text("Hello, world!")
-                .padding()
+                .padding(.bottom, 48)
 
             Button("Show the sheet") {
                 showSheet.toggle()
             }
-//            Button("Show the second sheet") {
-//                showSecondSheet.toggle()
-//            }
+
+
         }
         .padding()
         .sheet(isPresented: $showSheet) {
@@ -34,8 +32,7 @@ struct ContentView: View {
         }
 //        .sheet(isPresented: $showSecondSheet) {
 //            MySheetView()
-//                .presentationDetents([.medium, .large, .height(100)])
-//                .presentationDragIndicator(.hidden)
+//                .presentationDetents([.medium, .large])
 //        }
     }
 }

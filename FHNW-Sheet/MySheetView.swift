@@ -24,7 +24,7 @@ struct MySheetView: View {
 
             }
             .padding()
-            .background(Color(white: 0.9))
+            .background(Color(white: 0.8))
             Spacer()
             Text("I ***sheet***, so I am")
             Spacer()
