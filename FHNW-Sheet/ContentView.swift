@@ -10,30 +10,31 @@ import SwiftUI
 // MARK: - ContentView
 
 struct ContentView: View {
-    @State private var showSheet = false
+    @State private var showSheet = false {
+        didSet {
+            print("Breakpoint here")
+        }
+    }
+
+    @State private var showSecondSheet = false
 
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-                .padding(.bottom, 48)
-
-            Button("Show the sheet") {
+        VStack(spacing: 48) {
+            Button("Show the first sheet") {
                 showSheet.toggle()
             }
 
-
+            Button("Show the second sheet") {
+                showSecondSheet.toggle()
+            }
         }
-        .padding()
+        .buttonStyle(BorderedProminentButtonStyle())
         .sheet(isPresented: $showSheet) {
             Text("This is the content of this 'sheet'")
         }
-//        .sheet(isPresented: $showSecondSheet) {
-//            MySheetView()
-//                .presentationDetents([.medium, .large])
-//        }
+        .sheet(isPresented: $showSecondSheet) {
+            MySheetView()
+        }
     }
 }
 

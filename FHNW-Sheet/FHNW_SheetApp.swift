@@ -13,5 +13,6 @@ struct FHNW_SheetApp: App {
         WindowGroup {
             ContentView()
         }
+
     }
 }
