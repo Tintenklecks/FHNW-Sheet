@@ -18,6 +18,7 @@ struct ContentView: View {
 
     @State private var showSecondSheet = false
 
+    @State private var textHeight: CGFloat = 0
     var body: some View {
         VStack(spacing: 48) {
             Button("Show the first sheet") {
@@ -29,11 +30,30 @@ struct ContentView: View {
             }
         }
         .buttonStyle(BorderedProminentButtonStyle())
+
         .sheet(isPresented: $showSheet) {
             Text("This is the content of this 'sheet'")
+                .background(GeometryReader { proxy in
+                    Color.clear
+                        .onAppear {
+                            self.textHeight = proxy.size.height
+                        }
+                        .onChange(of: proxy.size.height) {
+                            self.textHeight = proxy.size.height
+                        }
+                })
+                .presentationDetents([.height(textHeight + 30)])
+                //.readHeight(to: $textHeight)
         }
+
         .sheet(isPresented: $showSecondSheet) {
-            MySheetView()
+            MySheetView(showSheet: $showSecondSheet)
+
+                .presentationDetents(
+                    [.medium, .large, .fraction(0.5), .height(29)]
+                )
+        }.onChange(of: textHeight) {
+            print(textHeight)
         }
     }
 }

@@ -12,6 +12,7 @@
 		AAFC308D2941C78900A00826 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAFC308C2941C78900A00826 /* Assets.xcassets */; };
 		AAFC30902941C78A00A00826 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAFC308F2941C78A00A00826 /* Preview Assets.xcassets */; };
 		AAFC30972941C8C800A00826 /* MySheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFC30962941C8C800A00826 /* MySheetView.swift */; };
+		B6C73C8D2B151F2800A77220 /* HeightReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C73C8C2B151F2800A77220 /* HeightReader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		AAFC308C2941C78900A00826 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AAFC308F2941C78A00A00826 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AAFC30962941C8C800A00826 /* MySheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySheetView.swift; sourceTree = "<group>"; };
+		B6C73C8C2B151F2800A77220 /* HeightReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightReader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				AAFC30882941C78500A00826 /* FHNW_SheetApp.swift */,
 				AAFC308A2941C78500A00826 /* ContentView.swift */,
 				AAFC30962941C8C800A00826 /* MySheetView.swift */,
+				B6C73C8C2B151F2800A77220 /* HeightReader.swift */,
 				AAFC308C2941C78900A00826 /* Assets.xcassets */,
 				AAFC308E2941C78A00A00826 /* Preview Content */,
 			);
@@ -98,7 +101,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1410;
-				LastUpgradeCheck = 1410;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					AAFC30842941C78500A00826 = {
 						CreatedOnToolsVersion = 14.1;
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAFC30972941C8C800A00826 /* MySheetView.swift in Sources */,
+				B6C73C8D2B151F2800A77220 /* HeightReader.swift in Sources */,
 				AAFC308B2941C78500A00826 /* ContentView.swift in Sources */,
 				AAFC30892941C78500A00826 /* FHNW_SheetApp.swift in Sources */,
 			);
@@ -185,6 +189,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -245,6 +250,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -279,6 +285,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,6 +315,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
